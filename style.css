@@ -1,0 +1,173 @@
+/* Couleurs inspirées du site Agrivi */
+:root {
+    --main-color: #2A8E4E; /* Vert principal */
+    --secondary-color: #1B5B3D; /* Vert foncé */
+    --background-color: #F8F8F8; /* Fond clair */
+    --text-color: #333333; /* Texte principal */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--main-color);
+    color: white;
+    padding: 15px 30px;
+}
+
+header .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+header .logo-container img {
+    width: 120px;
+    height: auto;
+    margin-right: 10px;
+}
+
+header .header-buttons a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+header .header-buttons a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    color: white;
+    font-size: 36px; }
+
+
+.intro {
+        position: relative;
+        width: 100%;
+        height: 400px; /* Ajuste selon ton besoin */
+        display: flex;
+        flex-direction: column; /* Affiche les éléments en colonne */
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        overflow: hidden;
+}
+    
+.background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+    
+    .bg-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ajuste les images pour couvrir toute la section */
+        opacity: 0;
+        filter: blur(5px); /* Ajoute un léger flou pour la lisibilité */
+        transition: opacity 2s ease-in-out;
+    }
+    
+    .bg-img.active {
+        opacity: 1;
+    }
+    
+    .content {
+        position: relative;
+        z-index: 2;
+        background: rgba(0, 0, 0, 0.4); /* Améliore la lisibilité du texte */
+        padding: 20px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .content h1 {
+        color: green; /* Remet la couleur verte au h1 */
+        margin-bottom: 10px;
+        font-size: 10rem; /* Augmente la taille du texte du h1 */
+    }
+    
+    .content p {
+        margin-bottom: 29px;
+        font-size: 2rem; /* Augmente la taille du texte du h1 */
+    }
+    
+    .content .btn-primary {
+        margin-top: 10px;
+        background-color: green; /* Couleur de fond verte */
+        color: white; /* Texte blanc */
+        padding: 12px 24px;
+        border: none;
+        border-radius: 25px; /* Bords arrondis */
+        font-size: 1.2rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .content .btn-primary:hover {
+        background-color: darkgreen; /* Assombrit au survol */
+    }    
+.avantages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 50px 20px;
+    background-color: #F5F5DC;
+}
+
+.avantage {
+    width: 30%;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f4f4f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.avantage img {
+    width: 60px;  /* Ajuste la taille de l'icône */
+    height: auto;
+    display: block;
+    margin: 0 auto 10px; /* Centre l'image et ajoute un espace sous l'icône */
+}
+
+.avantage h3 {
+    font-size: 22px;
+    color: var(--main-color);
+    margin-bottom: 15px;
+}
+
+.avantage p {
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+footer p {
+    font-size: 14px;
+}
